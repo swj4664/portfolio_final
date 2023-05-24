@@ -22,6 +22,10 @@ ul{
   padding-left:20px;
 }
 
+li::marker {
+    color: var(--point-color);
+}
+
 /* ----------section1---------- */
 
 #section1 {
@@ -69,10 +73,11 @@ ul{
     margin: 0 auto;
 }
 
-#section2 h2 {
+h2 {
     color: var(--point-color);
     letter-spacing: 2px;
     font-size: 30px;
+    text-align: center;
 }
 
 #section2 .article {
@@ -94,7 +99,45 @@ ul{
 #section2 .article .pofol_G .pofolImg {
     flex: 1.5 1 0;
     padding: 0 20px;
+    position: relative;
 }
+
+#section2 .article .pofol_G .pofolImg a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: .2s;
+}
+
+#section2 .article .pofol_G .pofolImg a:hover::after {
+    background-color: rgb(255, 255, 255, .9);
+}
+
+#section2 .article .pofol_G .pofolImg p {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FF8A00;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: 1s;
+    z-index: 99;
+}
+
+
+#section2 .article .pofol_G .pofolImg:hover p {
+    display: block;
+    opacity: 1;
+}
+
 
 #section2 .article .pofolImg img {
     width: 100%;
@@ -103,6 +146,7 @@ ul{
 #section2 .article .pofol_G {
     display: flex;
     align-items: flex-start;
+    overflow: hidden;
 }
 
 #section2 .article .pofol_G .pofolText {
@@ -127,9 +171,7 @@ ul{
     color: var(--second-color)
 }
 
-#section2 .article .pofol_G .pofolText li::marker {
-    color: var(--point-color);
-}
+
 
 #section2 .article .pofol_G .pofolText li {
     font-size: 16px;
@@ -151,9 +193,129 @@ ul{
 .bar {
     position: fixed;
     height: 10px;
-    width: 1%;
     background-color: var(--point-color);
     z-index: 99;
 }
 
+.up {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(../img/up.svg);
+    background-repeat:no-repeat;
+    background-position: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: .2s;
+    visibility: hidden;
+    z-index: 999;
+}
 
+
+.up.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#footer {
+    text-align: center;
+    padding: 50px;
+}
+
+#footer ul{
+    padding: 0;
+}
+
+#footer li {
+    list-style: none;
+}
+
+#footer h2 {
+    padding-bottom: 30px;
+}
+
+#footer p {
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--second-color);
+    margin-bottom: 30px;
+    letter-spacing: .1em;
+    padding: 0;
+}
+
+#section3 {
+    display: flex;
+    justify-content: center;
+}
+
+#section3 .article {
+    border-bottom: 1px solid #dbdbdb;
+    width: 90%;
+    padding: 80px 0;
+}
+
+#section3 .article .iconG {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+#section3 .article .iconG .iconG_L{
+    display: flex;
+    padding-right: 20px;
+}
+
+#section3 .article .iconG .iconG_R{
+    display: flex;
+    padding-left: 20px;
+}
+
+
+#section3 .article .iconG .icon {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(201, 201, 201);
+    cursor: pointer;
+    margin: 0 20px;
+    transition: all .3s;
+}
+
+#section3 .article .iconG .icon h3 {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+    opacity: 0;
+    font-weight: 100;
+    color: var(--second-color);
+    visibility: hidden;
+}
+
+#section3 .article .iconG .iconG_R .icon:last-child h3 {
+    bottom: -70px;
+    text-align: center;
+}
+
+#section3 .article .iconG .icon:first-child
+{
+    margin-left: 0;
+}
+#section3 .article .iconG .icon:last-child {
+    margin-right: 0;
+}
+
+
+#section3 .article .iconG .icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}

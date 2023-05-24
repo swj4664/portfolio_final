@@ -1,43 +1,65 @@
-
 @media only screen and (max-width: 960px) {
 
-/* ----------section2---------- */
-#section2 .article .pofol_G {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    /* ----------section2---------- */
+    #section2 .article .pofol_G {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-#section2 .article .pofol_G .pofolImg {
-    flex: 1 1 0;
-    padding: 0 20px;
-    width: 100%;
-}
+    #section2 .article .pofol_G .pofolImg {
+        flex: 1 1 0;
+        padding: 0 20px;
+        width: 100%;
+    }
 
-#section2 .article .pofol_G .pofolText {
-    flex: 1 1 0;
-    padding: 20px;
-    align-self: baseline;
-}
+    #section2 .article .pofol_G .pofolText {
+        flex: 1 1 0;
+        padding: 20px;
+        align-self: baseline;
+    }
 
-#section2 .article .pofol_G .pofolText h3{
-    letter-spacing: 1px;
-    font-size: 24px;
-    margin-top: 0;
-}
+    #section2 .article .pofol_G .pofolText h3 {
+        letter-spacing: 1px;
+        font-size: 24px;
+        margin-top: 0;
+    }
 
-#section2 .article .pofol_G .pofolText h3 span{
-    font-weight: 100;
-    font-size: 16px;
-    color: var(--second-color)
-}
+    #section2 .article .pofol_G .pofolText h3 span {
+        font-weight: 100;
+        font-size: 16px;
+        color: var(--second-color)
+    }
 
-#section2 .article .pofol_G .pofolText li::marker {
-    color: var(--point-color);
-}
+    #section2 .article .pofol_G .pofolText li::marker {
+        color: var(--point-color);
+    }
 
-#section2 .article .pofol_G .pofolText li {
-    font-size: 16px;
-}
+    #section2 .article .pofol_G .pofolText li {
+        font-size: 16px;
+    }
+
+    /* ----------section2---------- */
+
+    #section3 .article .iconG {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    #section3 .article .iconG .iconG_L {
+        display: flex;
+        padding-right: 0px;
+        justify-content: center;
+    }
+
+    #section3 .article .iconG .iconG_R {
+        display: flex;
+        padding-left: 0px;
+        padding-top: 40px;
+        justify-content: center;
+    }
+
 
 }
