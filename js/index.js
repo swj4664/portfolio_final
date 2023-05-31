@@ -31,7 +31,7 @@ window.addEventListener('scroll', function () {
     document.querySelector('.skill').addEventListener('click', ()=> {
         let length2 = document.getElementById('section3').getBoundingClientRect()
         let position2 = (length2.top+ window.pageYOffset)
-        scrollTo({ top: position2-100, behavior: 'smooth' })
+        scrollTo({ top: position2, behavior: 'smooth' })
     })
 });
 
