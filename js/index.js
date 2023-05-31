@@ -13,6 +13,12 @@ window.addEventListener('scroll', function () {
     } else {
         up.classList.remove('show')
     }
+
+    if(scrollTop !== 0) {
+        document.querySelector('.scroll').style.opacity = '0'
+    } else {
+        document.querySelector('.scroll').style.opacity = '1'
+    }
 });
 
 up.addEventListener('click', () => {

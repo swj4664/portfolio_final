@@ -73,6 +73,7 @@ li::marker {
     align-items: center;
     position: absolute;
     bottom: 20px;
+    transition: .4s;
 }
 
 #section1 .scroll p{
