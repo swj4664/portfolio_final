@@ -19,6 +19,20 @@ window.addEventListener('scroll', function () {
     } else {
         document.querySelector('.scroll').style.opacity = '1'
     }
+
+    document.querySelector('.home').addEventListener('click', ()=> {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    })
+    document.querySelector('.pofol').addEventListener('click', ()=> {
+        let length = document.getElementById('section2').getBoundingClientRect()
+        let position = (length.top+ window.pageYOffset)
+        scrollTo({ top: position-100, behavior: 'smooth' })
+    })
+    document.querySelector('.skill').addEventListener('click', ()=> {
+        let length2 = document.getElementById('section3').getBoundingClientRect()
+        let position2 = (length2.top+ window.pageYOffset)
+        scrollTo({ top: position2-100, behavior: 'smooth' })
+    })
 });
 
 up.addEventListener('click', () => {

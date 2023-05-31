@@ -278,6 +278,33 @@ h2 {
     z-index: 99;
 }
 
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 9;
+    text-align: right;
+}
+
+.header ul {
+    margin: 20px 40px;
+}
+
+.header li{
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+
+.header li:hover{
+    border-bottom: 3px solid #FF8A00;
+}
+
+
+.header li:nth-child(2){
+    margin: 0 70px;
+}
+
 .up {
     position: fixed;
     right: 50px;
