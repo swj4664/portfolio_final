@@ -98,5 +98,15 @@
         justify-content: center;
     }
 
+    #section3 .article .iconG .icon {
+        position: relative;
+        width: 75px;
+        height: 75px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgb(201, 201, 201);
+        cursor: pointer;
+        margin: 0 10px;
+        transition: all .3s;
+    }
 
 }
