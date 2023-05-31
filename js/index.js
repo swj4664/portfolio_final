@@ -25,9 +25,6 @@ window.addEventListener('scroll', function () {
     let videoLength = video.getBoundingClientRect()
     let videoPosition = (videoLength.top + window.pageYOffset)
     
-console.log(scrollTop)
-console.log('_________')
-console.log(videoPosition+200)
 
     if(!flag){
         if (scrollTop > videoPosition-300) {

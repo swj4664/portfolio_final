@@ -60,6 +60,10 @@ li::marker {
     border-bottom: 3px solid #FF8A00;
 }
 
+.header li:nth-child(1){
+    color: var(--point-color);
+    font-weight: 700;
+}
 
 .header li:nth-child(2){
     margin: 0 70px;
