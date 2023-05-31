@@ -1,5 +1,28 @@
 @media only screen and (max-width: 960px) {
 
+    /* ----------section1---------- */
+
+    #section1 .title h1 {
+        font-weight: 100;
+        font-size: 2em;
+        line-height: 1.4em;
+    }
+
+    .blob {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        z-index: -9;
+    }
+
+
+
+    #section1 .title h1 span {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+
+
     /* ----------section2---------- */
     #section2 .article .pofol_G {
         display: flex;
