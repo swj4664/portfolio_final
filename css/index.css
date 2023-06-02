@@ -8,7 +8,7 @@
 :root {
     --main-color: #2E2E2E;
     --second-color: #7B7B7B;
-    --point-color: #FF8A00;
+    --point-color: #f67777;
 }
 
 body {
@@ -34,34 +34,49 @@ li::marker {
 
 .header {
     position: fixed;
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     background-color: white;
-    z-index: 9;
+    z-index: 999;
 }
 
-.header ul {
-    flex: 1;
-    width: 1100px;
-    padding: 0;
+.header .menu {
+    visibility: hidden;
+    opacity: 0;
     margin: 20px 40px;
     text-align: right;
+    transform: translateX(50px);
+    transition: .5s;
+}
+
+.header .menu ul {
+    padding: 0;
 }
 
 .header li{
+    position: relative;
     display: inline-block;
     list-style: none;
     cursor: pointer;
 }
 
-.header li:hover{
-    border-bottom: 3px solid #FF8A00;
+.header li::before {
+    content: '';
+    position: absolute;
+    background-color: #f67777;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    transition: width .3s ease;
+}
+
+.header li:hover::before {
+    width: 100%;
 }
 
 .header li:nth-child(1){
-    color: var(--point-color);
+    color: #f67777;
     font-weight: 700;
 }
 
@@ -69,8 +84,50 @@ li::marker {
     margin: 0 70px;
 }
 
+.header .header_content {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header .burger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 999;
+}
+
+.header .burger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #f67777;
+}
+
+.header .burger span:nth-child(2) {
+    margin: 5px 0;
+    transition: .3s ease;
+}
+
+.header .burger span:nth-child(3) {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s ease;
+}
+
 /* ----------section1---------- */
 
+#particles-js {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+/* #f67777 */
 #section1 {
     display: flex;
     justify-content: center;
@@ -78,31 +135,59 @@ li::marker {
     height: 100vh;
     letter-spacing: 1px;
     line-height: 50px;
+    background-color: #ffffff;
 }
 
 #section1 .title {
+    display: inline-block;
     padding: 20px;
+    z-index: 99;
+    background-color: rgb(255, 255, 255, .6);
 }
 
-#section1 .title h1 {
-    font-weight: 100;
-    font-size: 3em;
-    line-height: 1.4em;
-    word-break: keep-all;
-}
-
-.blob {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    z-index: -9;
-}
-
-
-
-#section1 .title h1 span {
-    font-size: 1.2em;
+#section1 .title p {
+    margin: 0;
     font-weight: 700;
+    font-size: 4em;
+    line-height: 1.6em;
+    word-break: keep-all;
+    color: #2E2E2E;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#section1 .title p:nth-child(1) {
+    animation: show1 1s ease .3s forwards;
+}
+
+#section1 .title p:nth-child(2) {
+    animation: show2 1s ease 1s forwards;
+}
+
+@keyframes show1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes show2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+#section1 .title p span {
+    color: #f67777;
 }
 
 #section1 .scroll{
@@ -118,7 +203,7 @@ li::marker {
     margin: 0;
     padding: 0;
     height: 40px;
-    color: var(--second-color);
+    color: #2E2E2E;
 }
 
 #section1 .scroll img{
@@ -159,6 +244,9 @@ li::marker {
 
 /* ----------section2---------- */
 
+
+
+
 #section2 {
     display: flex;
     flex-direction: column;
@@ -169,11 +257,21 @@ li::marker {
     margin-top: 200px;
 }
 
-h2 {
+#section2 .sec2_title{
+    position: relative;
+    width: 100%;
+}
+
+
+
+.sec2_title h2 {
     color: var(--point-color);
     letter-spacing: 2px;
-    font-size: 30px;
-    text-align: center;
+    font-size: 100px;
+    text-align: left;
+    z-index: 999;
+    margin: 150px 0 0 0;
+    padding-left: 50px;
 }
 
 #section2 .article {
@@ -315,9 +413,9 @@ h2 {
 
 .bar {
     position: fixed;
-    height: 10px;
+    height: 5px;
     background-color: var(--point-color);
-    z-index: 99;
+    z-index: 9999;
 }
 
 
@@ -345,17 +443,36 @@ h2 {
 }
 
 
-#footer {
-    text-align: center;
-    padding: 50px;
+/* footer */
+
+.blob {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
 }
 
-#footer ul{
+
+#footer {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#footer .blob {
+    position: relative;
+}
+
+#footer .blob ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 0;
 }
 
 #footer li {
     list-style: none;
+    color: white;
+    font-size: 20px;
 }
 
 #footer h2 {
@@ -363,9 +480,9 @@ h2 {
 }
 
 #footer p {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 100;
-    color: var(--second-color);
+    color: white;
     margin-bottom: 30px;
     letter-spacing: .1em;
     padding: 0;
@@ -374,12 +491,18 @@ h2 {
 #section3 {
     display: flex;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#section3 h2 {
+    text-align: center;
 }
 
 #section3 .article {
-    border-bottom: 1px solid #dbdbdb;
     width: 90%;
     padding: 80px 0;
+    border-bottom: 1px solid #dbdbdb;
 }
 
 #section3 .article .iconG {

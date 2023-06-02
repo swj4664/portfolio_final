@@ -1,11 +1,37 @@
 @media only screen and (max-width: 960px) {
 
+
+    /* header */
+    
+
+.header .menu {
+    visibility: hidden;
+    opacity: 0;
+    margin: 20px 10px;
+    text-align: right;
+    transform: translateX(50px);
+    transition: .5s;
+}
+
+.header li:nth-child(2){
+    margin: 0 40px;
+}
+
+
     /* ----------section1---------- */
 
-    #section1 .title h1 {
+    /* #section1 .title h1 {
         font-weight: 100;
         font-size: 2.2em;
         line-height: 1.4em;
+        text-align: center;
+    } */
+
+    #section1 .title {
+        display: inline-block;
+        padding: 20px;
+        z-index: 99;
+        background-color: rgb(255, 255, 255, .6);
         text-align: center;
     }
 
@@ -13,7 +39,7 @@
         position: absolute;
         width: 400px;
         height: 400px;
-        z-index: -9;
+        z-index: 9;
     }
 
 
@@ -23,18 +49,6 @@
         font-weight: 700;
     }
 
-    .header ul {
-    flex: 1;
-    width: 1100px;
-    padding: 0;
-    margin: 20px;
-    text-align: center;
-}
-
-
-    .header li:nth-child(2){
-        margin: 0 40px;
-    }
 
 
     /* ----------section2---------- */
@@ -76,6 +90,16 @@
         font-size: 16px;
     }
 
+    .sec2_title h2 {
+        color: var(--point-color);
+        letter-spacing: 2px;
+        font-size: 80px;
+        text-align: left;
+        z-index: 999;
+        margin: 150px 0 0 0;
+        padding-left: 50px;
+    }
+
     /* ----------section2---------- */
 
     #section3 .article .iconG {
@@ -108,5 +132,7 @@
         margin: 0 10px;
         transition: all .3s;
     }
+
+    
 
 }

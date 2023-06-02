@@ -1,9 +1,63 @@
+// header
+
+let menu = document.querySelector('.burger');
+let menu_list = document.querySelector('.menu');
+let menu_flag = false
+
+let menu_x = document.querySelectorAll('span');
+
+
+menu.addEventListener('click', () => {
+    if (!menu_flag) {
+        menu_list.style.visibility = 'visible'
+        menu_list.style.transform = 'translateX(-80px)'
+        menu_list.style.opacity = '1'
+        menu_x[1].style.rotate = '-45deg'
+        menu_x[2].style.rotate = '45deg'
+        menu_x[2].style.opacity = '1'
+        menu_x[0].style.opacity = '0'
+        menu_x[3].style.opacity = '0'
+        menu_flag = true
+    } else {
+        menu_list.style.visibility = 'hidden'
+        menu_list.style.transform = 'translateX(50px)'
+        menu_list.style.opacity = '0'
+        menu_x[1].style.rotate = '0deg'
+        menu_x[2].style.rotate = '0deg'
+        menu_x[2].style.opacity = '0'
+        menu_x[0].style.opacity = '1'
+        menu_x[3].style.opacity = '1'
+        menu_flag = false
+    }
+
+
+})
+
+
+
+
+
 let up = document.querySelector('.up')
 let flag = false;
 
+let length = document.getElementById('section2').getBoundingClientRect()
+let position = (length.top + window.pageYOffset)
+
+let length2 = document.getElementById('section3').getBoundingClientRect()
+let position3 = document.getElementById('section3').offsetTop
+let body = document.querySelector('body').getBoundingClientRect()
+var windowHeight = window.innerHeight;
+let position2 = Math.floor(length2.top + window.pageYOffset);
+
+let scrollHeight = Math.max(
+    document.documentElement.scrollHeight,
+    document.body.scrollHeight
+  );
+
+
 window.addEventListener('scroll', function () {
     let scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    let scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = Math.floor(window.scrollY || window.pageYOffset || document.documentElement.scrollTop);
     let scrollPercent = (scrollTop / scrollHeight) * 100;
     let roundedScrollPercent = Math.round(scrollPercent);
     let bar = this.document.querySelector('.bar');
@@ -24,33 +78,59 @@ window.addEventListener('scroll', function () {
     let video = document.getElementById('video')
     let videoLength = video.getBoundingClientRect()
     let videoPosition = (videoLength.top + window.pageYOffset)
-    
 
-    if(!flag){
-        if (scrollTop > videoPosition-300) {
+
+    if (!flag) {
+        if (scrollTop > videoPosition - 300) {
             video.autoplay = true
             video.load();
             flag = true
         }
-    } else if (scrollTop < videoPosition-300 || scrollTop > videoPosition+200){
+    } else if (scrollTop < videoPosition - 300 || scrollTop > videoPosition + 200) {
         flag = false
         video.autoplay = false
         video.load();
     }
+    let header_li = this.document.querySelectorAll('.menu li')
+    if (position - 100 > scrollTop) {
+        header_li[0].style.color = '#f67777';
+        header_li[0].style.fontWeight = '700';
+    } else {
+        header_li[0].style.color = '#2E2E2E';
+        header_li[0].style.fontWeight = '100';
+    }
+
+    if (position - 100 <= scrollTop && position2 - 181 > scrollTop && scrollHeight !== scrollTop ) {
+        header_li[1].style.color = '#f67777';
+        header_li[1].style.fontWeight = '700';
+    } else {
+        header_li[1].style.color = '#2E2E2E';
+        header_li[1].style.fontWeight = '100';
+    }
+
+console.log(position2 -180);
+console.log(scrollTop)
+    if (  position2 - 181 <= scrollTop || scrollHeight == scrollTop) {
+        header_li[2].style.color = '#f67777';
+        header_li[2].style.fontWeight = '700';
+    } else {
+        header_li[2].style.color = '#2E2E2E';
+        header_li[2].style.fontWeight = '100';
+    }
+
+
 
 });
 document.querySelector('.home').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
 })
 document.querySelector('.pofol').addEventListener('click', () => {
-    let length = document.getElementById('section2').getBoundingClientRect()
-    let position = (length.top + window.pageYOffset)
-    scrollTo({ top: position - 100, behavior: 'smooth' })
+
+    scrollTo({ top: position, behavior: 'smooth' })
 })
 document.querySelector('.skill').addEventListener('click', () => {
-    let length2 = document.getElementById('section3').getBoundingClientRect()
-    let position2 = (length2.top + window.pageYOffset)
-    scrollTo({ top: position2, behavior: 'smooth' })
+    scrollTo({ top: position2 - 180, behavior: 'smooth' })
+
 })
 
 

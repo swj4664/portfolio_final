@@ -11,39 +11,34 @@
 </head>
 
 <body>
+    
     <div class="bar">
     </div>
     <header class="header">
-        <ul>
-            <li class="home">Home</li>
-            <li class="pofol">Portfolio</li>
-            <li class="skill">Skill&Contact</li>
-        </ul>
+        <div class="header_content">
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="menu">
+                <ul>
+                    <li class="home">Home</li>
+                    <li class="pofol">Project</li>
+                    <li class="skill">Skill&Contact</li>
+                </ul>
+            </div>
+        </div>
     </header>
     <div class="up"></div>
+    <div id="particles-js"></div>
     <section1 id="section1">
-        <div class="blob">
-            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="100%" id="blobSvg">
-                <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color: rgb(255, 138, 0);"></stop>
-                        <stop offset="100%" style="stop-color: rgb(255, 199, 96);"></stop>
-                    </linearGradient>
-                </defs>
-                <path fill="url(#gradient)">
-                    <animate attributeName="d" dur="10000ms" repeatCount="indefinite" values="M441,327.5Q434,405,357.5,414.5Q281,424,204,444Q127,464,73.5,399Q20,334,54.5,262.5Q89,191,112.5,121.5Q136,52,214.5,29.5Q293,7,339,72Q385,137,416.5,193.5Q448,250,441,327.5Z;
-                        M404.5,313.5Q401,377,346.5,433Q292,489,233,435Q174,381,135,343.5Q96,306,86.5,246.5Q77,187,116.5,137Q156,87,221,67Q286,47,341,87.5Q396,128,402,189Q408,250,404.5,313.5Z;
-                        M401,299.5Q368,349,325.5,394Q283,439,209,444.5Q135,450,75.5,392.5Q16,335,36.5,257.5Q57,180,113.5,145.5Q170,111,230,66Q290,21,341.5,75.5Q393,130,413.5,190Q434,250,401,299.5Z;
-                        M396,308Q388,366,337,410.5Q286,455,210,453Q134,451,97.5,385Q61,319,82,257.5Q103,196,136.5,153.5Q170,111,223.5,103.5Q277,96,352.5,98Q428,100,416,175Q404,250,396,308Z;
-                        M441,327.5Q434,405,357.5,414.5Q281,424,204,444Q127,464,73.5,399Q20,334,54.5,262.5Q89,191,112.5,121.5Q136,52,214.5,29.5Q293,7,339,72Q385,137,416.5,193.5Q448,250,441,327.5Z;
-                        ">
-                    </animate>
-                </path>
-            </svg>
-        </div>
+       
         <container class="title">
-            <h1>안녕하세요<br><span>프론트엔드 신입개발자, 신원정</span>입니다.</h1>
+            <p>안녕하세요!</p>
+            <p><span>프론트엔드</span> 신입개발자, 신원정입니다. </p>
         </container>
         <div class="scroll">
             <p>아래로 스크롤하세요.</p>
@@ -53,8 +48,11 @@
         </div>
     </section1>
     <section2 id="section2">
-        <h2>portfolio</h2>
-
+        <div class="sec2_title">
+           
+            <h2>Project.</h2>
+    
+        </div>
         <article1 class="article1 article">
             <div class="pofol_G">
                 <div class="pofolImg">
@@ -123,7 +121,7 @@
         <article3 class="article3 article">
             <div class="pofol_G">
                 <div class="pofolImg">
-                    <video controls loop muted poster="./img/watchThisMovie.png">
+                    <video id="video" controls muted poster="./img/watchThisMovie.png">
                         <source src="./img/review.mp4" type="video/mp4">
                         zzz 
                     </video>
@@ -257,13 +255,38 @@
         </article>
     </section3>
     <footer id="footer">
+       
         <h2>Contact</h2>
-        <ul>
-            <li>Email</li>
-            <p>shinwj4664@naver.com</p>
-        </ul>
+        
+        <div class="blob">
+            <ul>
+                <li>Email</li>
+                <p>shinwj4664@naver.com</p>
+            </ul>
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="100%" id="blobSvg">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color: #f67777"></stop>
+                        <stop offset="100%" style="stop-color: #ff9d9d;"></stop>
+                    </linearGradient>
+                </defs>
+                <path fill="url(#gradient)">
+                    <animate attributeName="d" dur="10000ms" repeatCount="indefinite" values="M441,327.5Q434,405,357.5,414.5Q281,424,204,444Q127,464,73.5,399Q20,334,54.5,262.5Q89,191,112.5,121.5Q136,52,214.5,29.5Q293,7,339,72Q385,137,416.5,193.5Q448,250,441,327.5Z;
+                        M404.5,313.5Q401,377,346.5,433Q292,489,233,435Q174,381,135,343.5Q96,306,86.5,246.5Q77,187,116.5,137Q156,87,221,67Q286,47,341,87.5Q396,128,402,189Q408,250,404.5,313.5Z;
+                        M401,299.5Q368,349,325.5,394Q283,439,209,444.5Q135,450,75.5,392.5Q16,335,36.5,257.5Q57,180,113.5,145.5Q170,111,230,66Q290,21,341.5,75.5Q393,130,413.5,190Q434,250,401,299.5Z;
+                        M396,308Q388,366,337,410.5Q286,455,210,453Q134,451,97.5,385Q61,319,82,257.5Q103,196,136.5,153.5Q170,111,223.5,103.5Q277,96,352.5,98Q428,100,416,175Q404,250,396,308Z;
+                        M441,327.5Q434,405,357.5,414.5Q281,424,204,444Q127,464,73.5,399Q20,334,54.5,262.5Q89,191,112.5,121.5Q136,52,214.5,29.5Q293,7,339,72Q385,137,416.5,193.5Q448,250,441,327.5Z;
+                        ">
+                    </animate>
+                </path>
+            </svg>
+        </div>
     </footer>
+    
     <script src="./js/index.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
