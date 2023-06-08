@@ -316,7 +316,7 @@ li::marker {
     flex-direction: column;
     align-items: center;
     max-width: 1500px;
-    min-width: 400px;
+    min-width: 350px;
     margin: 0 auto;
     margin: 150px auto;
 }
@@ -530,6 +530,10 @@ li::marker {
     margin-bottom: 0;
 }
 
+#section2 .article .pofol_G .pofolText a {
+    color: var(--main-color);
+}
+
 #section2 .article .pofol_G .pofolText a h3 {
     display: inline-block;
     letter-spacing: 1px;
@@ -537,10 +541,7 @@ li::marker {
     margin-bottom: 10px;
 }
 
-#section2 .article .pofol_G .pofolText a {
-    color: var(--main-color);
 
-}
 
 #section2 .article .pofol_G .pofolText a:hover {
     animation: blink 1s infinite;
