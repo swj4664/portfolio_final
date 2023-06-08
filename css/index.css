@@ -78,6 +78,7 @@ li::marker {
     display: inline-block;
     list-style: none;
     cursor: pointer;
+    margin: 0 30px;
 }
 
 .header li::before {
@@ -99,9 +100,6 @@ li::marker {
     font-weight: 700;
 }
 
-.header li:nth-child(2) {
-    margin: 0 70px;
-}
 
 .header .header_content {
     position: relative;
@@ -305,13 +303,234 @@ li::marker {
 /* ---------------------------- */
 
 
-
 /* ----------section2---------- */
 
-
-
-
 #section2 {
+    background: var(--point-color);
+}
+
+#section2 .myValues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+#section2 .myValues .svgTitle {
+    height: 94px;
+}
+
+#section2 .myValues .svgTitle svg {
+    display: none;
+    animation: fill 1s ease forwards 2.5s;
+}
+
+#section2 .myValues .value_g {
+    position: relative;
+    margin: 100px 0;
+    width: 400px;
+    height: 400px;
+}
+
+#section2 .myValues .value_g > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: white;
+}
+
+#section2 .myValues .value_g  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid #ffffff79;
+}
+
+#section2 .myValues .value_g  .orbit:nth-child(1) {
+    width: 200px;
+    height: 200px;
+}
+
+#section2 .myValues .value_g  .orbit:nth-child(2) {
+    width: 280px;
+    height: 280px;
+}
+
+#section2 .myValues .value_g  .orbit:nth-child(3) {
+    width: 340px;
+    height: 340px;
+}
+
+#section2 .myValues .value_g  .orbit:nth-child(4) {
+    width: 400px;
+    height: 400px;
+}
+
+#section2 .myValues .value_g  .value_icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#section2 .myValues .value_g  .value_icon > .val{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    white-space: nowrap;
+}
+
+#section2 .myValues .value_g  .value_icon > .val p{
+    transform: translateX(22px);
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+#section2 .myValues .value_g .value_icon > .val:nth-child(1){
+    top: 48%;
+    left: 48%;
+    animation: rotate 7s linear infinite;
+    background: rgb(39, 205, 255);
+}
+
+#section2 .myValues .value_g .value_icon > .val:nth-child(2){
+    top: 48%;
+    left: 48%;
+    animation: rotate2 10s linear infinite;
+    background: rgb(253, 52, 186);
+}
+
+#section2 .myValues .value_g .value_icon > .val:nth-child(3){
+    top: 48%;
+    left: 48%;
+    animation: rotate3 15s linear infinite;
+    background: rgb(20, 247, 198);
+}
+
+#section2 .myValues .value_g .value_icon > .val:nth-child(4){
+    top: 48%;
+    left: 48%;
+    animation: rotate4 20s linear infinite;
+    background: rgb(141, 247, 20);
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg)translateX(100px)rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(100px)rotate(-360deg);
+    }
+}
+
+@keyframes rotate2 {
+    from{
+        transform: rotate(0deg)translateX(-140px)rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateX(-140px)rotate(-360deg);
+    }
+}
+
+@keyframes rotate3 {
+    from{
+        transform: rotate(0deg)translateY(-170px)rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateY(-170px)rotate(-360deg);
+    }
+}
+
+@keyframes rotate4 {
+    from{
+        transform: rotate(0deg)translateY(200px)rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg)translateY(200px)rotate(-360deg);
+    }
+}
+
+
+@keyframes opacity {
+    to{
+        opacity: 1;
+    }
+}
+
+#section2 .myValues path:nth-child(1) {
+    stroke-dasharray: 664;
+    stroke-dashoffset: 664;
+    animation: line-anim 2s ease forwards;
+}
+#section2 .myValues path:nth-child(2) {
+    stroke-dasharray: 352;
+    stroke-dashoffset: 352;
+    animation: line-anim 2s ease forwards .2s;
+}
+#section2 .myValues path:nth-child(3) {
+    stroke-dasharray: 407;
+    stroke-dashoffset: 407;
+    animation: line-anim 2s ease forwards .4s;
+}
+#section2 .myValues path:nth-child(4) {
+    stroke-dasharray: 434;
+    stroke-dashoffset: 434;
+    animation: line-anim 2s ease forwards .6s;
+}
+#section2 .myValues path:nth-child(5) {
+    stroke-dasharray: 299;
+    stroke-dashoffset: 299;
+    animation: line-anim 2s ease forwards .8s;
+}
+#section2 .myValues path:nth-child(6) {
+    stroke-dasharray: 444;
+    stroke-dashoffset: 444;
+    animation: line-anim 2s ease forwards 1s;
+}
+#section2 .myValues path:nth-child(7) {
+    stroke-dasharray: 469;
+    stroke-dashoffset: 469;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+#section2 .myValues path:nth-child(8) {
+    stroke-dasharray: 469;
+    stroke-dashoffset: 469;
+    animation: line-anim 2s ease forwards 1.4s;
+}
+
+@keyframes line-anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: white;
+    }
+}
+
+
+/* ---------------------------- */
+
+/* ----------section3---------- */
+
+
+
+
+#section3 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -321,18 +540,18 @@ li::marker {
     margin: 150px auto;
 }
 
-#section2 .sec2_title {
+#section3 .sec2_title {
     width: 100vw;
     overflow: hidden;
     margin: 100px 0;
 }
 
-#section2 .imgClickPlz {
+#section3 .imgClickPlz {
     padding-top: 50px;
 
 }
 
-#section2 .imgClickPlz>span {
+#section3 .imgClickPlz>span {
     display: inline-block;
     position: relative;
     animation: wave 3s ease calc(0.1s * var(--i)) infinite;
@@ -383,8 +602,7 @@ li::marker {
 }
 
 
-/* 수정시작 */
-#section2 .article {
+#section3 .article {
     padding: 100px 0;
     width: 90%;
     opacity: 0;
@@ -393,11 +611,11 @@ li::marker {
     border-bottom: 1px solid #dbdbdb;
 }
 
-#section2 .article:last-child {
+#section3 .article:last-child {
     border-bottom: none;
 }
 
-#section2 .article p {
+#section3 .article p {
     letter-spacing: 1px;
     font-size: 20px;
     color: var(--second-color);
@@ -408,13 +626,13 @@ li::marker {
 
 
 
-#section2 .article .pofol_G {
+#section3 .article .pofol_G {
     display: flex;
     /* flex-direction: column; */
     /* overflow: hidden; */
 }
 
-#section2 .article .pofol_G .pofolSlide {
+#section3 .article .pofol_G .pofolSlide {
     position: relative;
     display: flex;
     flex: 1.3 1 0;
@@ -424,13 +642,13 @@ li::marker {
     align-items: baseline;
 }
 
-#section2 .article .pofol_G .pofolSlide .slide_g {
+#section3 .article .pofol_G .pofolSlide .slide_g {
     display: flex;
     transform: translateX(0px);
     transition: transform .6s ease;
 }
 
-#section2 .article .pofol_G .pofolSlide .btn_g {
+#section3 .article .pofol_G .pofolSlide .btn_g {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -440,12 +658,12 @@ li::marker {
     padding-bottom: 70px;
 }
 
-#section2 .article .pofol_G .pofolSlide .btn_g .dot_g {
+#section3 .article .pofol_G .pofolSlide .btn_g .dot_g {
     flex: 1;
     text-align: center;
 }
 
-#section2 .article .pofol_G .pofolSlide .btn_g .dot_g .dot {
+#section3 .article .pofol_G .pofolSlide .btn_g .dot_g .dot {
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -459,7 +677,7 @@ li::marker {
 }
 
 
-#section2 .article .pofol_G .pofolSlide .btn_g .btn {
+#section3 .article .pofol_G .pofolSlide .btn_g .btn {
     width: 16px;
     height: 16px;
     /* top: 34px; */
@@ -468,28 +686,28 @@ li::marker {
 }
 
 
-#section2 .article .pofol_G .pofolSlide .btn_g .preBtn {
+#section3 .article .pofol_G .pofolSlide .btn_g .preBtn {
     /* flex: 1;
     left: 10px; */
     margin-left: 20px;
 }
 
 
-#section2 .article .pofol_G .pofolSlide .btn_g .nextBtn {
+#section3 .article .pofol_G .pofolSlide .btn_g .nextBtn {
     /* flex: 1;
     right: 10px; */
     margin-right: 20px;
 }
 
 
-#section2 .article .pofol_G .pofolSlide .slide {
+#section3 .article .pofol_G .pofolSlide .slide {
     display: flex;
     justify-content: center;
     flex: 0 0 100%;
     width: 100%;
 }
 
-#section2 .article .pofol_G .pofolSlide .slide img {
+#section3 .article .pofol_G .pofolSlide .slide img {
     width: 97%;
     object-fit: scale-down;
     margin: 0 0 auto 0;
@@ -497,17 +715,18 @@ li::marker {
     box-shadow: 0px 0px 8px 0px rgb(201, 201, 201);
 }
 
-#section2 .article .pofol_G .pofolSlide .slide video {
+#section3 .article .pofol_G .pofolSlide .slide video {
     width: 99%;
     background: black;
 }
 
-#section2 .article .pofol_G .pofolSlide .slide p {
+#section3 .article .pofol_G .pofolSlide .slide p {
     position: absolute;
     color: var(--second-color);
     bottom: -140px;
     height: 40px;
     width: 70%;
+    font-size: 18px;
     line-height: 30px;
     text-align: center;
     word-break: keep-all;
@@ -516,7 +735,7 @@ li::marker {
 
 
 
-#section2 .article .pofol_G .pofolText {
+#section3 .article .pofol_G .pofolText {
     flex: 1 1 0;
     padding-left: 30px;
 }
@@ -525,16 +744,16 @@ li::marker {
     padding-left: 20px;
 }
 
-#section2 .article .pofol_G .pofolText ul {
+#section3 .article .pofol_G .pofolText ul {
     margin-top: 40px;
     margin-bottom: 0;
 }
 
-#section2 .article .pofol_G .pofolText a {
+#section3 .article .pofol_G .pofolText a {
     color: var(--main-color);
 }
 
-#section2 .article .pofol_G .pofolText a h3 {
+#section3 .article .pofol_G .pofolText a h3 {
     display: inline-block;
     letter-spacing: 1px;
     font-size: 34px;
@@ -543,7 +762,7 @@ li::marker {
 
 
 
-#section2 .article .pofol_G .pofolText a:hover {
+#section3 .article .pofol_G .pofolText a:hover {
     animation: blink 1s infinite;
 }
 
@@ -561,30 +780,30 @@ li::marker {
     }
 }
 
-#section2 .article .pofol_G .pofolText a:hover::before {
+#section3 .article .pofol_G .pofolText a:hover::before {
     width: 100%;
 }
 
 
-#section2 .article .pofol_G .pofolText a img {
+#section3 .article .pofol_G .pofolText a img {
     width: 20px;
     height: 20px;
     padding-left: 12px;
 }
 
 
-#section2 .article .pofol_G .pofolText > span {
+#section3 .article .pofol_G .pofolText > span {
     font-weight: 100;
     font-size: 20px;
     padding-left: 20px;
     color: var(--second-color)
 }
 
-#section2 .article .pofol_G .pofolText li {
+#section3 .article .pofol_G .pofolText li {
     font-size: 20px;
 }
 
-#section2 .article .pofol_G .pofolText li > p {
+#section3 .article .pofol_G .pofolText li > p {
     font-weight: 100;
     font-size: 18px;
     color: var(--second-color);
@@ -593,31 +812,16 @@ li::marker {
     padding: 0;
 }
 
-#section2 .article .pofol_G .pofolText p > span{
+#section3 .article .pofol_G .pofolText p > span{
     color: #2E2E2E;
     font-weight: 700;
 }
 
-#section2 .article .pofol_G .pofolText li:last-child p {
+#section3 .article .pofol_G .pofolText li:last-child p {
     margin-bottom: 0px;
 }
 
-/* #section2 .article3 a {
-    border: 2px solid var(--point-color);
-    width: 100%;
-    display: block;
-    margin: 10px 0 20px 0;
-    color: var(--point-color);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: .2s;
-} */
 
-
-/* 수정 */
 
 .bar {
     position: fixed;
@@ -705,45 +909,45 @@ li::marker {
     padding: 0;
 }
 
-#section3 {
+#section4 {
     display: flex;
     justify-content: center;
     max-width: 1500px;
     margin: 0 auto;
 }
 
-#section3 h2 {
+#section4 h2 {
     text-align: center;
     font-size: 30px;
     font-family: 'SBAggroB';
     color: white;
 }
 
-#section3 .article {
+#section4 .article {
     width: 90%;
     padding: 80px 0;
     background: #ffcfcf;
     border-radius: 30px;
 }
 
-#section3 .article .iconG {
+#section4 .article .iconG {
     display: none;
     justify-content: center;
     padding: 40px 0;
 }
 
-#section3 .article .iconG .iconG_L {
+#section4 .article .iconG .iconG_L {
     display: flex;
     padding-right: 20px;
 }
 
-#section3 .article .iconG .iconG_R {
+#section4 .article .iconG .iconG_R {
     display: flex;
     padding-left: 20px;
 }
 
 
-#section3 .article .iconG .icon {
+#section4 .article .iconG .icon {
     position: relative;
     width: 90px;
     height: 90px;
@@ -754,7 +958,7 @@ li::marker {
     transition: all .3s;
 }
 
-#section3 .article .iconG .icon h3 {
+#section4 .article .iconG .icon h3 {
     position: absolute;
     width: 90px;
     bottom: -40px;
@@ -773,16 +977,16 @@ li::marker {
 
 
 
-#section3 .article .iconG .icon:first-child {
+#section4 .article .iconG .icon:first-child {
     margin-left: 0;
 }
 
-#section3 .article .iconG .icon:last-child {
+#section4 .article .iconG .icon:last-child {
     margin-right: 0;
 }
 
 
-#section3 .article .iconG .icon img {
+#section4 .article .iconG .icon img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -790,11 +994,11 @@ li::marker {
     width: 80%;
 }
 
-#section3 .article .Icon3d {
+#section4 .article .Icon3d {
     margin: 100px 0;
 }
 
-#section3 .article .Icon3d ul {
+#section4 .article .Icon3d ul {
     position: relative;
     display: flex;
     transform-style: preserve-3d;
@@ -804,7 +1008,7 @@ li::marker {
     padding: 0;
 }
 
-#section3 .article .Icon3d ul li {
+#section4 .article .Icon3d ul li {
     position: relative;
     list-style: none;
     margin: 0 20px;
@@ -812,7 +1016,7 @@ li::marker {
     height: 60px;
 }
 
-#section3 .article .Icon3d ul li p {
+#section4 .article .Icon3d ul li p {
     position: absolute;
     bottom: -60px;
     left: 50%;
@@ -826,13 +1030,13 @@ li::marker {
     transition: .5s;
 }
 
-#section3 .article .Icon3d ul li:hover p {
+#section4 .article .Icon3d ul li:hover p {
     visibility: visible;
     opacity: 1;
     transform: translate(-50%, 0);
 }
 
-#section3 .article .Icon3d ul li span {
+#section4 .article .Icon3d ul li span {
     position: absolute;
     top: 0;
     left: 0;
@@ -847,7 +1051,7 @@ li::marker {
     transition: .5s;
 }
 
-#section3 .article .Icon3d ul li span:nth-child(1)::before {
+#section4 .article .Icon3d ul li span:nth-child(1)::before {
     content: '';
     position: absolute;
     bottom: -9px;
@@ -859,7 +1063,7 @@ li::marker {
     transform: skewX(-41deg);
 }
 
-#section3 .article .Icon3d ul li span:nth-child(1)::after {
+#section4 .article .Icon3d ul li span:nth-child(1)::after {
     content: '';
     position: absolute;
     top: 0;
@@ -871,14 +1075,14 @@ li::marker {
     transform: skewY(-48deg);
 }
 
-#section3 .article .Icon3d ul li img {
+#section4 .article .Icon3d ul li img {
     width: 80%;
     background-color: white;
 }
 
 
 
-#section3 .article .Icon3d ul li:hover span {
+#section4 .article .Icon3d ul li:hover span {
     transition: .5s;
     z-index: 9999;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
@@ -886,60 +1090,60 @@ li::marker {
 
 
 
-#section3 .article .Icon3d ul li span:nth-child(5) {
+#section4 .article .Icon3d ul li span:nth-child(5) {
     background-color: white !important;
 }
 
-#section3 .article .Icon3d ul li:hover span:nth-child(5) {
+#section4 .article .Icon3d ul li:hover span:nth-child(5) {
     transform: translate(40px, -40px);
     opacity: 1;
 }
 
-#section3 .article .Icon3d ul li:hover span:nth-child(4) {
+#section4 .article .Icon3d ul li:hover span:nth-child(4) {
     transform: translate(30px, -30px);
     opacity: 0.8;
 }
 
-#section3 .article .Icon3d ul li:hover span:nth-child(3) {
+#section4 .article .Icon3d ul li:hover span:nth-child(3) {
     transform: translate(20px, -20px);
     opacity: 0.6;
 }
 
-#section3 .article .Icon3d ul li:hover span:nth-child(2) {
+#section4 .article .Icon3d ul li:hover span:nth-child(2) {
     transform: translate(10px, -10px);
     opacity: 0.4;
 }
 
-#section3 .article .Icon3d ul li:hover span:nth-child(1) {
+#section4 .article .Icon3d ul li:hover span:nth-child(1) {
     transform: translate(0px, -0px);
     opacity: 0.2;
 }
 
 
-#section3 .article .Icon3d ul li:nth-child(7):hover span {
+#section4 .article .Icon3d ul li:nth-child(7):hover span {
     background-color: var(--point-color);
 }
 
-#section3 .article .Icon3d ul li:nth-child(6):hover span {
+#section4 .article .Icon3d ul li:nth-child(6):hover span {
     background-color: var(--point-color);
 }
 
-#section3 .article .Icon3d ul li:nth-child(5):hover span {
+#section4 .article .Icon3d ul li:nth-child(5):hover span {
     background-color: var(--point-color);
 }
 
-#section3 .article .Icon3d ul li:nth-child(4):hover span {
+#section4 .article .Icon3d ul li:nth-child(4):hover span {
     background-color: var(--point-color);
 }
 
-#section3 .article .Icon3d ul li:nth-child(3):hover span {
+#section4 .article .Icon3d ul li:nth-child(3):hover span {
     background-color: var(--point-color);
 }
 
-#section3 .article .Icon3d ul li:nth-child(2):hover span {
+#section4 .article .Icon3d ul li:nth-child(2):hover span {
     background-color: var(--point-color);
 }
 
-#section3 .article .Icon3d ul li:nth-child(1):hover span {
+#section4 .article .Icon3d ul li:nth-child(1):hover span {
     background-color: var(--point-color);
 }

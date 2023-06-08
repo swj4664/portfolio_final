@@ -1,12 +1,12 @@
 // 리사이징
-if(window.innerWidth > 1200){
-window.addEventListener('resize', () => {
-    setTimeout(()=> {
-        location.reload();
-    }, 1200)
-  });
+if (window.innerWidth > 1200) {
+    window.addEventListener('resize', () => {
+        setTimeout(() => {
+            location.reload();
+        }, 1200)
+    });
 }
-  
+
 // header
 
 let menu = document.querySelector('.burger');
@@ -49,11 +49,16 @@ menu.addEventListener('click', () => {
 let up = document.querySelector('.up')
 // let flag = false;
 
-let length = document.getElementById('section2').getBoundingClientRect()
+let length0 = document.getElementById('section2').getBoundingClientRect()
+let position0 = (length0.top + window.pageYOffset)
+
+let length = document.getElementById('section3').getBoundingClientRect()
 let position = (length.top + window.pageYOffset)
 
-let length2 = document.getElementById('section3').getBoundingClientRect()
-let position3 = document.getElementById('section3').offsetTop
+
+
+let length2 = document.getElementById('section4').getBoundingClientRect()
+let position3 = document.getElementById('section4').offsetTop
 let body = document.querySelector('body').getBoundingClientRect()
 var windowHeight = window.innerHeight;
 let position2 = Math.floor(length2.top + window.pageYOffset);
@@ -86,7 +91,7 @@ window.addEventListener('scroll', function () {
 
 
     let header_li = this.document.querySelectorAll('.menu li')
-    if (position - 100 > scrollTop) {
+    if (position - 100 > scrollTop && position0 - 100 > scrollTop) {
         header_li[0].style.color = '#f67777';
         header_li[0].style.fontWeight = '700';
     } else {
@@ -94,14 +99,15 @@ window.addEventListener('scroll', function () {
         header_li[0].style.fontWeight = '100';
     }
 
-    if (position - 100 <= scrollTop && position2 - 301 > scrollTop && scrollHeight !== scrollTop) {
+    if (position0 - 100 <= scrollTop && position - 100 > scrollTop) {
         header_li[1].style.color = '#f67777';
         header_li[1].style.fontWeight = '700';
     } else {
         header_li[1].style.color = '#2E2E2E';
         header_li[1].style.fontWeight = '100';
     }
-    if (position2 - 301 <= scrollTop || scrollHeight == scrollTop) {
+
+    if (position - 100 <= scrollTop && position2 - 301 > scrollTop && scrollHeight !== scrollTop) {
         header_li[2].style.color = '#f67777';
         header_li[2].style.fontWeight = '700';
     } else {
@@ -109,9 +115,22 @@ window.addEventListener('scroll', function () {
         header_li[2].style.fontWeight = '100';
     }
 
+    if (position2 - 301 <= scrollTop || scrollHeight == scrollTop) {
+        header_li[3].style.color = '#f67777';
+        header_li[3].style.fontWeight = '700';
+    } else {
+        header_li[3].style.color = '#2E2E2E';
+        header_li[3].style.fontWeight = '100';
+    }
 
-
-
+    let section2_title = document.querySelector('#section2 svg')
+    let position0_anim = length0.height / 5
+    let position0_anim_end = position0 + length0.height
+    if (position0_anim < scrollTop && position0_anim_end > scrollTop) {
+        section2_title.style.display = 'block'
+    } else {
+        section2_title.style.display = 'none'
+    }
 });
 
 
@@ -130,13 +149,15 @@ window.addEventListener('scroll', function () {
 document.querySelector('.home').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
 })
+document.querySelector('.value').addEventListener('click', () => {
+    scrollTo({ top: position0, behavior: 'smooth' })
+})
 document.querySelector('.pofol').addEventListener('click', () => {
 
     scrollTo({ top: position, behavior: 'smooth' })
 })
 document.querySelector('.skill').addEventListener('click', () => {
     scrollTo({ top: position2 - 300, behavior: 'smooth' })
-
 })
 
 
@@ -200,7 +221,7 @@ const screenWidth = window.innerWidth || document.documentElement.clientWidth ||
 // let Icon3d = document.querySelector('.Icon3d')
 // let skillArticle = document.querySelector('.#section3 .article')
 // iconG.style.display = 'none'
-if(screenWidth < 960) {
+if (screenWidth < 960) {
     cursor.style.display = 'none'
     // iconG.style.display = 'flex'
     // Icon3d.style.display = 'none'

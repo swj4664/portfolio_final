@@ -18,7 +18,6 @@ let slideAll7 = [...document.querySelectorAll('.article7 .slide')]
 
 
 slideAll.push(slideAll1, slideAll2, slideAll3, slideAll4, slideAll5, slideAll6, slideAll7)
-console.log(slideAll)
 for (let i = 0; i < slideAll.length; i++) {
     slideLengthAll.push(slideLength)
 
