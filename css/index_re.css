@@ -58,22 +58,7 @@
 
     /* ----------section3---------- */
 
-    .sec2_title h2 {
-        color: var(--point-color);
-        letter-spacing: 2px;
-        font-size: 60px;
-        z-index: 999;
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    #section3 .sec2_title {
-        width: 100vw;
-        overflow: hidden;
-        margin: 50px 0;
-    }
-
-    #section3 .article {
+    #section2 .article {
     padding: 80px 0;
     width: 90%;
     opacity: 0;
@@ -167,18 +152,6 @@
     text-align: center;
 }
 
-#section3 .article .pofol_G .pofolSlide .btn_g .dot_g .dot {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--point-color);
-    opacity: .2;
-    margin: 10px 10px;
-    transform: translateY(3px);
-    cursor: pointer;
-    transition: opacity .2s;
-}
 
 #section3 .article .pofol_G .pofolText {
     flex: 1 1 0;
@@ -222,15 +195,7 @@
     padding: 0;
 }
 
-#section3 .article .pofol_G .pofolText > span {
-    display: block;
-    font-weight: 100;
-    font-size: 20px;
-    padding-left: 0px;
-    color: var(--second-color)
-}
-
-#section3 .article .pofol_G .pofolText li:last-child p {
+#section2 .article .pofol_G .pofolText li:last-child p {
     margin-bottom: 0px;
 }
 /* 

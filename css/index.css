@@ -749,11 +749,7 @@ li::marker {
     margin-bottom: 0;
 }
 
-#section3 .article .pofol_G .pofolText a {
-    color: var(--main-color);
-}
-
-#section3 .article .pofol_G .pofolText a h3 {
+#section2 .article .pofol_G .pofolText a h3 {
     display: inline-block;
     letter-spacing: 1px;
     font-size: 34px;
