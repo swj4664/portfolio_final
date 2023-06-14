@@ -1,5 +1,4 @@
 
-window.onload = function() {
 // 리사이징
 if (window.innerWidth > 1200) {
     window.addEventListener('resize', () => {
@@ -253,4 +252,3 @@ article[5].addEventListener('click', (e) => {
         alert('진행중인 프로젝트입니다.')
     }
 })
-}
