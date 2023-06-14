@@ -1,3 +1,4 @@
+alert('dddd')
 let btn_g = [...document.querySelectorAll('.btn_g')]
 let preBtn = [...document.querySelectorAll('.preBtn')]
 let nextBtn = [...document.querySelectorAll('.nextBtn')]
