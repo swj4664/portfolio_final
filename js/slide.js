@@ -1,4 +1,4 @@
-alert('dddd')
+setTimeout(function() {
 let btn_g = [...document.querySelectorAll('.btn_g')]
 let preBtn = [...document.querySelectorAll('.preBtn')]
 let nextBtn = [...document.querySelectorAll('.nextBtn')]
@@ -90,3 +90,4 @@ btn_g.map(function (a, i) {
         }
     })
 })
+}, 100);
