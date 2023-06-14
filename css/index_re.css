@@ -54,8 +54,29 @@
         font-weight: 700;
     }
 
+    /* ----------section2---------- */
 
+    #section2 .myValues {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+    }
+    
 
+    #section2 .myValues .svgTitle {
+        height: 94px;
+        scale: .6;
+    }
+    
+    #section2 .myValues .value_g {
+        position: relative;
+        margin: 50px 0;
+        width: 400px;
+        height: 400px;
+        scale: .8;
+    }
+    
     /* ----------section3---------- */
 
     #section2 .article {
